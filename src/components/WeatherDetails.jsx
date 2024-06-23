@@ -14,11 +14,11 @@ function WeatherDetails({ weather }) {
       </div>
       <div className="detail-box">
         <div className="detail-label">Humidity</div>
-        <div className="detail-value">{weather.main.humidity} %</div>
+        <div className="detail-value">{weather.main.humidity}%</div>
       </div>
       <div className="detail-box">
         <div className="detail-label">Pressure</div>
-        <div className="detail-value">{weather.main.pressure} hPa</div>
+        <div className="detail-value">{weather.main.pressure} mb</div>
       </div>
       <div className="detail-box">
         <div className="detail-label">Visibility</div>

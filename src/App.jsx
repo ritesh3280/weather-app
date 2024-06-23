@@ -41,10 +41,14 @@ const App = () => {
     <div className="app">
       <div className="main-content">
         <div className="left-panel">
-          <SearchBox city={city} setCity={handleSearch} />
-          <WeatherCard weather={currentWeather} unit={unit} />
+          <div className="nav">
+            <SearchBox city={city} setCity={handleSearch} />
+            <button onClick={toggleUnit}>°C / °F</button>
+          </div>
+          <div className="weather-card-container">
+            <WeatherCard weather={currentWeather} unit={unit} />
+          </div>
         </div>
-        <button onClick={toggleUnit}>°C / °F</button>
         <div className="right-panel">
           <Forecast forecast={forecast} unit={unit} />
           <WeatherDetails weather={currentWeather} />
