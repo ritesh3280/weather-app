@@ -3,7 +3,7 @@ import WeatherCard from "./components/WeatherCard";
 import WeatherDetails from "./components/WeatherDetails";
 import Forecast from "./components/Forecast";
 import SearchBox from "./components/SearchBox";
-import { getWeather, getWeatherForecast } from "./api/weatherAPI";
+import { getWeather, getWeatherForecast } from "./api/weatherApi";
 import "./App.css";
 
 const App = () => {
@@ -43,7 +43,9 @@ const App = () => {
         <div className="left-panel">
           <div className="nav">
             <SearchBox city={city} setCity={handleSearch} />
-            <button onClick={toggleUnit}>°C / °F</button>
+            <button className="btn" onClick={toggleUnit}>
+              °C / °F
+            </button>
           </div>
           <div className="weather-card-container">
             <WeatherCard weather={currentWeather} unit={unit} />
@@ -51,7 +53,7 @@ const App = () => {
         </div>
         <div className="right-panel">
           <Forecast forecast={forecast} unit={unit} />
-          <WeatherDetails weather={currentWeather} />
+          <WeatherDetails weather={currentWeather} unit={unit} />
         </div>
       </div>
     </div>

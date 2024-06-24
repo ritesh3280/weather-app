@@ -9,6 +9,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  background-color: #f0f0f0; /* Light gray background */
 }
 
 h1,
@@ -35,14 +36,19 @@ h6 {
   justify-content: center;
   align-items: center;
   padding: 20px;
+  border-right: 2px solid #333; /* Adding border for separation */
 }
 
 .nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-top: auto;
-  gap: 120px;
+  gap: 20px;
+  margin-top: 20px; /* Adjust margin-top to align items at the bottom */
+}
+
+.nav .btn {
+  height: 30px; /* Ensure consistent height for buttons in nav */
+  white-space: nowrap; /* Prevent text from wrapping */
 }
 
 .weather-card-container {
@@ -56,39 +62,28 @@ h6 {
 .search-box {
   display: flex;
   align-items: center;
-  margin-top: 10px;
+  width: 100%;
+  gap: 10px;
 }
 
 .search-box input {
   flex: 1;
   padding: 8px 12px;
   border: none;
-  font-size: 12px;
+  font-size: 14px; /* Slightly larger font size */
   background-color: #aeadb7;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
 }
+
 .search-box input::placeholder {
   color: black;
   opacity: 1;
 }
 
 .search-box input:focus {
+  background-color: #d6d6db; /* Light gray on focus */
   border-color: black;
   outline: none;
-}
-
-.search-box button {
-  padding: 8px 12px;
-  margin-left: 10px;
-  border: none;
-  background-color: #aeadb7;
-  color: black;
-  font-size: 12px;
-  cursor: pointer;
-  transition: background-color ease-in 0.5s;
-}
-
-.search-box button:hover {
-  background-color: #d6d6db;
 }
 
 .weather-card {
@@ -96,6 +91,7 @@ h6 {
   color: rgb(231, 231, 235);
   padding: 20px;
   margin: 0 auto;
+  background-color: transparent; /* Transparent background */
 }
 
 .weather-card img {
@@ -103,16 +99,20 @@ h6 {
   height: 250px;
   object-fit: cover;
   margin-bottom: 10px;
+  transition: transform 0.3s ease; /* Smooth transformation */
+}
+
+.weather-card:hover img {
+  transform: scale(1.1); /* Scale up image on hover */
 }
 
 .weather-card h2 {
-  text-align: center;
   font-size: 45px;
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .weather-temp {
-  text-align: center;
   font-size: 75px;
   font-weight: bold;
   margin-bottom: 10px;
@@ -120,13 +120,11 @@ h6 {
 }
 
 .weather-desc {
-  text-align: center;
   font-size: 25px;
   margin-bottom: 20px;
 }
 
 .current-date {
-  text-align: center;
   padding: 20px;
   margin-top: 20px;
   font-size: 18px;
@@ -160,6 +158,13 @@ h6 {
   padding: 30px;
   background-color: rgb(31, 33, 56);
   color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.forecast-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .forecast-content {
@@ -178,6 +183,11 @@ h6 {
   width: 80px;
   height: 80px;
   margin-bottom: 10px;
+  transition: transform 0.3s ease; /* Smooth transformation */
+}
+
+.weather-icon:hover {
+  transform: scale(1.1); /* Scale up icon on hover */
 }
 
 .temp-label {
@@ -223,14 +233,57 @@ h6 {
   padding: 20px;
   background-color: rgb(31, 33, 56);
   color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.detail-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .detail-label {
   font-size: 14px;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 10px; /* Increase gap between label and value */
+  margin-top: 10px; /* Add gap on top of the label */
 }
 
 .detail-value {
+  display: flex;
+  align-items: baseline; /* Align unit with the bottom of the value */
+  justify-content: center;
+}
+
+.detail-value h2 {
+  font-size: 45px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.unit {
+  font-size: 20px;
+  font-weight: normal;
+  margin-left: 5px;
+}
+
+/* Button styles */
+.btn {
+  padding: 8px 12px;
+  border: none;
+  background-color: #aeadb7;
+  color: black;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.btn:hover {
+  background-color: #d6d6db;
+}
+
+.search-input {
+  padding: 8px 10px;
   font-size: 14px;
+  width: 200px;
 }

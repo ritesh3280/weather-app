@@ -54,7 +54,11 @@ function WeatherCard({ weather, unit }) {
   return (
     <div className="weather-card">
       <h2>{weather.name}</h2>
-      <img src={iconUrl} alt={weather.weather[0].description} />
+      <img
+        className="weather-icon"
+        src={iconUrl}
+        alt={weather.weather[0].description}
+      />
       <div className="weather-temp">
         {Math.round(weather.main.temp)}°{unit === "metric" ? "C" : "F"}
       </div>
