@@ -244,13 +244,13 @@ h6 {
 .detail-label {
   font-size: 14px;
   font-weight: bold;
-  margin-bottom: 10px; /* Increase gap between label and value */
-  margin-top: 10px; /* Add gap on top of the label */
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .detail-value {
   display: flex;
-  align-items: baseline; /* Align unit with the bottom of the value */
+  align-items: baseline;
   justify-content: center;
 }
 
@@ -274,7 +274,7 @@ h6 {
   color: black;
   font-size: 12px;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Smooth background color transition */
+  transition: background-color 0.3s ease;
 }
 
 .btn:hover {
@@ -297,151 +297,151 @@ h6 {
     max-width: 100%;
     padding: 20px;
     border-right: none;
-    border-bottom: 2px solid #333; /* Adding border for separation */
-  }
+    border-bottom: 2px solid #333;
 
-  .weather-card {
-    margin-top: 30px;
-  }
-  .weather-card img {
-    width: 100px;
-    height: 100px;
-  }
+    .weather-card {
+      margin-top: 30px;
+    }
+    .weather-card img {
+      width: 100px;
+      height: 100px;
+    }
 
-  .weather-card h2 {
-    font-size: 30px;
-  }
+    .weather-card h2 {
+      font-size: 30px;
+    }
 
-  .weather-temp {
-    font-size: 45px;
-  }
+    .weather-temp {
+      font-size: 45px;
+    }
 
-  .weather-desc {
-    font-size: 18px;
-    height: 40px; /* Ensure the same height for description box */
-  }
+    .weather-desc {
+      font-size: 18px;
+      height: 40px;
+    }
 
-  .detail-value h2 {
-    font-size: 30px;
-  }
+    .detail-value h2 {
+      font-size: 30px;
+    }
 
-  .unit {
-    font-size: 16px;
-  }
+    .unit {
+      font-size: 16px;
+    }
 
-  .forecast {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    padding: 0 20px;
-    margin-bottom: 20px; /* Add margin to separate forecast from details */
-    justify-content: center;
-  }
+    .forecast {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      padding: 0 20px;
+      margin-bottom: 20px;
+      justify-content: center;
+    }
 
-  .forecast-item {
-    width: 100%;
-    height: 150px; /* Ensure uniform size */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background-color: rgb(31, 33, 56);
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
+    .forecast-item {
+      width: 100%;
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background-color: rgb(31, 33, 56);
+      color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-  .forecast-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  }
+    .forecast-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
 
-  .day-label {
-    font-size: 14px;
-    margin-bottom: 5px; /* Adjust spacing between label and icon */
-  }
+    .day-label {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
 
-  .weather-icon {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 5px; /* Adjust spacing */
-    transition: transform 0.3s ease; /* Smooth transformation */
-  }
+    .weather-icon {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 5px;
+      transition: transform 0.3s ease;
+    }
 
-  .temp-label {
-    font-size: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-top: 5px;
-  }
+    .temp-label {
+      font-size: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-top: 5px;
+    }
 
-  .min-temp,
-  .max-temp {
-    margin: 0 5px;
-    font-size: 12px; /* Adjust font size */
-  }
+    .min-temp,
+    .max-temp {
+      margin: 0 5px;
+      font-size: 12px;
+    }
 
-  .min-temp {
-    color: rgb(126, 126, 144);
-  }
+    .min-temp {
+      color: rgb(126, 126, 144);
+    }
 
-  .max-temp {
-    color: rgb(231, 231, 235);
-  }
+    .max-temp {
+      color: rgb(231, 231, 235);
+    }
 
-  .weather-details {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-top: 40px; /* Reduce top margin for details */
-    padding: 0 20px;
-    align-items: center;
-    justify-content: center;
-  }
+    .weather-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 40px;
+      padding: 0 20px;
+      align-items: center;
+      justify-content: center;
+    }
 
-  .detail-box {
-    width: 100%;
-    height: 150px; /* Ensure uniform size */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background-color: rgb(31, 33, 56);
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
+    .detail-box {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 150px;
+      display: flex;
+      padding: 20px;
+      background-color: rgb(31, 33, 56);
+      color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-  .detail-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  }
+    .detail-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
 
-  .detail-label {
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 5px; /* Adjust spacing */
-    margin-top: 5px; /* Adjust spacing */
-  }
+    .detail-label {
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      margin-top: 5px;
+    }
 
-  .detail-value {
-    display: flex;
-    align-items: baseline; /* Align unit with the bottom of the value */
-    justify-content: center;
-    width: 100%;
-  }
+    .detail-value {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      width: 100%;
+    }
 
-  .detail-value h2 {
-    font-size: 30px;
-    margin: 0;
-  }
+    .detail-value h2 {
+      font-size: 20px;
+      margin: 0;
+    }
 
-  .unit {
-    font-size: 16px;
-    margin-left: 5px;
+    .unit {
+      font-size: 16px;
+      margin-left: 5px;
+    }
   }
 }
