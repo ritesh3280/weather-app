@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect, useState } from "react";
 
 // Map weather condition codes to custom SVG icon URLs
 const iconMap = {
@@ -23,20 +24,18 @@ const iconMap = {
 };
 
 function WeatherCard({ weather, unit }) {
-  // Check if weather is undefined or its properties are undefined
   if (
     !weather ||
     !weather.main ||
     !weather.weather ||
     weather.weather.length === 0
   ) {
-    return null; // Or display a loading indicator/error message
+    return null;
   }
 
   const weatherIconCode = weather.weather[0].icon;
   const iconUrl = `https://bmcdn.nl/assets/weather-icons/v2.0/fill/${iconMap[weatherIconCode]}.svg`;
 
-  // Function to capitalize the first letter of each word in a string
   const capitalizeFirstLetter = (str) => {
     return str
       .split(" ")
@@ -44,7 +43,6 @@ function WeatherCard({ weather, unit }) {
       .join(" ");
   };
 
-  // Get current date in desired format
   const currentDate = new Date().toLocaleDateString("en-US", {
     weekday: "long",
     day: "numeric",

@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect, useState } from "react";
 
 // Map weather condition codes to custom SVG icon names
 const iconMap = {
@@ -22,9 +23,20 @@ const iconMap = {
   "50n": "mist",
 };
 
-function Forecast({ forecast, unit }) {
+function Forecast({ forecast, unit, animate }) {
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  useEffect(() => {
+    // This effect will run when the component mounts or when 'animate' changes
+    if (animate) {
+      setIsAnimating(true);
+      const timer = setTimeout(() => setIsAnimating(false), 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [animate]);
+
   if (!forecast || !forecast.list || forecast.list.length === 0) {
-    return null; // Or display a loading indicator/error message
+    return null;
   }
 
   const filterDailyForecast = (list) => {
@@ -119,7 +131,11 @@ function Forecast({ forecast, unit }) {
         }.svg`;
 
         return (
-          <div key={index} className="forecast-item">
+          <div
+            key={index}
+            className={`forecast-item ${isAnimating ? "fadeInUp" : ""}`}
+            style={{ animationDelay: `${index * 0.1}s` }}
+          >
             <div className="forecast-content">
               <div className="day-label">
                 {day.dayLabel} {day.dateLabel && `, ${day.dateLabel}`}

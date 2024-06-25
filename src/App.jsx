@@ -11,6 +11,7 @@ const App = () => {
   const [forecast, setForecast] = useState([]);
   const [city, setCity] = useState("Los Angeles");
   const [unit, setUnit] = useState("imperial");
+  const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,6 +36,8 @@ const App = () => {
 
   const handleSearch = (newCity) => {
     setCity(newCity);
+    setAnimate(true);
+    setTimeout(() => setAnimate(false), 100); // Reset animation trigger
   };
 
   return (
@@ -48,11 +51,19 @@ const App = () => {
             </button>
           </div>
           <div className="weather-card-container">
-            <WeatherCard weather={currentWeather} unit={unit} />
+            <WeatherCard
+              weather={currentWeather}
+              unit={unit}
+            />
           </div>
         </div>
         <div className="right-panel">
-          <Forecast forecast={forecast} unit={unit} />
+          <Forecast
+            forecast={forecast}
+            unit={unit}
+            animate={animate}
+            key={city}
+          />
           <WeatherDetails weather={currentWeather} unit={unit} />
         </div>
       </div>
